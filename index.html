@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Un pedacito de mi corazón ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;500;600&family=Poppins:wght@300;400;500&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #fff8f3;
+  color: #684b50;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+header {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 20px;
+  background: linear-gradient(145deg,#f9e4e7,#fff8f3,#f5e2d4);
+}
+
+.small {
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #a66b79;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(55px, 10vw, 90px);
+  font-weight: normal;
+  color: #b76e82;
+  margin: 20px 0;
+}
+
+header p {
+  max-width: 500px;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+button {
+  background: #bc7889;
+  color: white;
+  border: none;
+  padding: 14px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-family: inherit;
+  margin: 12px;
+  transition: .3s;
+}
+
+button:hover { background: #99596b; transform: scale(1.04); }
+
+section { padding: 65px 20px; }
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: #a86678;
+  font-weight: 500;
+}
+
+.text {
+  max-width: 650px;
+  margin: 20px auto;
+  line-height: 2;
+  font-size: 14px;
+}
+
+.heart {
+  font-size: 40px;
+  animation: latir 1.5s infinite;
+}
+
+@keyframes latir {
+  50% { transform: scale(1.2); }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 22px;
+  max-width: 850px;
+  margin: 35px auto;
+}
+
+.photo {
+  background: white;
+  padding: 10px 10px 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px #d9b7b744;
+  transform: rotate(-2deg);
+}
+
+.photo:nth-child(even) { transform: rotate(2deg); }
+
+.photo img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.photo p {
+  font-family: 'Great Vibes', cursive;
+  font-size: 25px;
+  margin: 12px 0 0;
+}
+
+.reasons {
+  max-width: 600px;
+  margin: auto;
+}
+
+.reason {
+  background: #fff;
+  padding: 15px;
+  border-radius: 15px;
+  margin: 12px;
+  box-shadow: 0 3px 15px #d9b7b722;
+  font-size: 14px;
+}
+
+.envelope {
+  background: #f4dce2;
+  max-width: 550px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  margin: 30px auto;
+}
+
+.letter {
+  display: none;
+  background: #fffdf9;
+  padding: 25px;
+  border-radius: 12px;
+  line-height: 2;
+  text-align: left;
+  font-size: 14px;
+}
+
+.letter.open { display: block; }
+
+footer {
+  background: #f3dfe2;
+  padding: 45px 20px;
+  line-height: 2;
+}
+
+footer h2 { font-family: 'Great Vibes', cursive; font-size: 45px; }
+
+@media(max-width:500px) {
+  section { padding: 45px 15px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="heart">♡</div>
+  <p class="small">UN DETALLE HECHO CON AMOR</p>
+  <h1>Un pedacito de mi corazón</h1>
+  <p>Para ti, María José. Porque hay personas que llegan a nuestra vida y la hacen mucho más bonita.</p>
+  <button onclick="document.getElementById('historia').scrollIntoView({behavior:'smooth'})">
+    Descubre tu sorpresa ♡
+  </button>
+</header>
+
+<section id="historia">
+  <h2>Nuestra historia</h2>
+  <div class="heart">💕</div>
+  <p class="text">
+    Desde aquel 19 de diciembre de 2025 comenzó una historia
+    que ocupa un lugar muy especial en mi corazón.
+    Hoy, 2 de noviembre de 2026, quiero recordarte
+    que sigo eligiendo compartir mis días contigo.
+  </p>
+</section>
+
+<section style="background:#f9e9e9">
+  <h2>Nuestros recuerdos</h2>
+  <p class="text">Cada fotografía guarda un pedacito de nuestra historia.</p>
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="foto1.jpg" alt="Nuestro recuerdo">
+      <p>Un momento especial</p>
+    </div>
+    <div class="photo">
+      <img src="foto2.jpg" alt="Nuestro recuerdo">
+      <p>Contigo es más bonito</p>
+    </div>
+    <div class="photo">
+      <img src="foto3.jpg" alt="Nuestro recuerdo">
+      <p>Un recuerdo para siempre</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>10 razones para amarte</h2>
+  <p class="text">Aunque necesitaría muchas más, aquí van diez:</p>
+
+  <div class="reasons">
+    <div class="reason">♡ Por la persona maravillosa que eres.</div>
+    <div class="reason">♡ Por tu sonrisa.</div>
+    <div class="reason">♡ Por tu forma de ser.</div>
+    <div class="reason">♡ Por los momentos que compartimos.</div>
+    <div class="reason">♡ Por tu cariño.</div>
+    <div class="reason">♡ Por cada recuerdo bonito.</div>
+    <div class="reason">♡ Por lo que me enseñas cada día.</div>
+    <div class="reason">♡ Por tus pequeños detalles.</div>
+    <div class="reason">♡ Por ser tú misma.</div>
+    <div class="reason">♡ Porque eres María José y eso ya es especial.</div>
+  </div>
+</section>
+
+<section style="background:#f9e9e9">
+  <h2>Una carta para ti</h2>
+  <div class="envelope">
+    <div style="font-size:45px">💌</div>
+    <p>Hay algo que quiero que leas...</p>
+    <button onclick="abrirCarta()">Abrir mi carta</button>
+
+    <div class="letter" id="carta">
+      Mi querida Majo:
+
+      Quiero que sepas que desde aquel 19 de diciembre
+      de 2025 has sido una persona muy especial en mi vida.
+
+      Gracias por cada sonrisa, cada conversación,
+      cada abrazo y cada recuerdo que hemos construido.
+
+      No somos perfectos, pero cada día deseo aprender,
+      crecer y ser una mejor persona.
+
+      No sé qué nos traerá el futuro, pero deseo que
+      sigamos construyendo momentos bonitos,
+      con amor, respeto, paciencia y comprensión.
+
+      Nunca olvides lo maravillosa que eres.
+
+      Con muchísimo cariño,
+
+      Miguel Ángel ❤️
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Un sueño contigo</h2>
+  <div class="heart">🌷</div>
+  <p class="text">
+    Sueño con seguir creando recuerdos,
+    cumplir metas, reír juntos y construir
+    una historia llena de amor, respeto y valores.
+  </p>
+</section>
+
+<footer>
+  <h2>Para mi Majo</h2>
+  <p>Si volviera a comenzar, me encantaría volver a conocerte.</p>
+  <div class="heart">❤️</div>
+  <p>Con cariño, Miguel Ángel.</p>
+  <small>Hecho especialmente para ti · 2026</small>
+</footer>
+
+<script>
+function abrirCarta() {
+  document.getElementById('carta').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
