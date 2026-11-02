@@ -112,7 +112,14 @@ h2 {
   object-fit: cover;
   border-radius: 4px;
 }
+.photo img {
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
 
+.photo img:hover {
+  transform: scale(1.02);
+}
 .photo p {
   font-family: 'Great Vibes', cursive;
   font-size: 25px;
@@ -167,7 +174,12 @@ footer h2 { font-family: 'Great Vibes', cursive; font-size: 45px; }
 </style>
 </head>
 
-<body>
+  <div class="lightbox" id="lightbox" onclick="cerrarFoto()">
+  <button type="button" onclick="event.stopPropagation(); cerrarFoto()">×</button>
+  <img id="fotoAmpliada" src="" alt="Foto ampliada" onclick="event.stopPropagation()">
+</div>
+
+  <body>
 
 <header>
   <div class="heart">♡</div>
@@ -280,11 +292,21 @@ footer h2 { font-family: 'Great Vibes', cursive; font-size: 45px; }
   <p>Con cariño, Miguel Ángel.</p>
   <small>Hecho especialmente para ti · 2026</small>
 </footer>
-
+    
 <script>
 function abrirCarta() {
   document.getElementById('carta').classList.toggle('open');
+} document.querySelectorAll('.gallery .photo img').forEach(img => {
+  img.addEventListener('click', () => {
+    document.getElementById('fotoAmpliada').src = img.src;
+    document.getElementById('lightbox').classList.add('open');
+  });
+});
+
+function cerrarFoto() {
+  document.getElementById('lightbox').classList.remove('open');
 }
+  
 </script>
 
 </body>
